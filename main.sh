@@ -1,5 +1,10 @@
 #!bin/bash
 
+# AUTHOR_NAME Abdul Rehman
+# AUTHOR_EMAIL mehars.6925@gmail.com
+# AUTHOR_PROFILE https://github.com/AbdulRehmanMehar
+# PUBLIC_URI https://github.com/AbdulRehmanMehar/mini-IDE
+
 mainMenu() {
     input=4
 
