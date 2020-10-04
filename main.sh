@@ -6,17 +6,18 @@
 # PUBLIC_URI https://github.com/AbdulRehmanMehar/mini-IDE
 
 mainMenu() {
-    input=4
+    input=-1
 
     while 
-        [ $input -ne 3 ]
+        [ $input -ne 4 ]
     do 
         echo "Welcome to Program Management!"
         echo ""
 
         echo "1. Compile and Run C Program"
         echo "2. Create File"
-        echo "3. Exit the program"
+        echo "3. Make changes to existing program (replace vars and strings)"
+        echo "4. Exit the program"
 
         echo ""
 
@@ -52,8 +53,15 @@ mainMenu() {
             wait $pid
                         
 
-        fi
+        elif [ $input -eq 3 ] 
+        then
+            
+            eval bash redirect.sh
+            pid=$!
+            wait $pid
 
+            echo $pid
+        fi
     
         echo ""
         echo ""
